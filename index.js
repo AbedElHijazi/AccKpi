@@ -3830,7 +3830,7 @@ app.post('/start-task/:taskId', async (req, res) => {
     await reqUpdate
       .input('taskId', taskId)
       .input('workFlowHdrId', sql.Int, workFlowHdrId)
-      .input('startTime', sql.DateTime2, startTimeFormatted)
+      .input('startTime', sql.DateTime2, startTime)
       .query(`
         UPDATE tblWorkflowDtl
         SET TimeStarted = @startTime
@@ -3980,7 +3980,7 @@ console.log('Planned:', plannedDateOnly, 'Finished:', finishedDateOnly, 'Delay:'
     // Mark workflow detail as finished
     await pool.request()
       .input('taskId', taskId)
-      .input('finishTime', sql.DateTime2, finishTimeFormatted)
+      .input('finishTime', sql.DateTime2, finishTime)
       .input('delay', delay)
       .input('workFlowHdrId', workFlowHdrId)
       .query(`

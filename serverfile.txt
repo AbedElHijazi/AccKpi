@@ -7135,3 +7135,1002 @@
 ---
 [2026-01-22T09:51:44.975Z]    - ID: 1016, ProjectID: 10, Status: Pending
 ---
+[2026-01-24T11:57:22.317Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-24T11:57:22.315Z] 
+================================================================================
+---
+[2026-01-24T11:57:22.318Z]   - User Project ID: 15
+---
+[2026-01-24T11:57:22.317Z]   - User Dept ID: 1
+---
+[2026-01-24T11:57:22.317Z]   - Is Admin: false
+---
+[2026-01-24T11:57:22.679Z] 📊 Total workflows in database: 21
+---
+[2026-01-24T11:57:22.901Z] 🔍 All workflows in DB (unfiltered): 21 total
+---
+[2026-01-24T11:57:22.901Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.901Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.901Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.901Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.902Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:22.935Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID AND 
+        EXISTS (
+          SELECT 1 FROM tblProcessDepartment pd
+          WHERE pd.ProcessID = hdr.ProcessID
+            AND pd.DepartmentID = @UserDeptId
+        )
+      
+---
+[2026-01-24T11:57:22.934Z]   - Adding filter: User Department ID = 1
+---
+[2026-01-24T11:57:22.933Z]   - Adding filter: Project ID = 15
+---
+[2026-01-24T11:57:22.903Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-24T11:57:23.180Z] ✅ Query executed - Returning 0 workflows
+---
+[2026-01-24T11:57:23.183Z]    - ID: 1031, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.181Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-24T11:57:23.184Z]    - ID: 1030, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.184Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.183Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.187Z]    - ID: 1028, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.186Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.188Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.186Z]    - ID: 1029, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.192Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.195Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.196Z]    - ID: 1025, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.196Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.192Z]    - ID: 1027, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.198Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.199Z]    - ID: 1023, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.194Z]    - ID: 1026, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.199Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.198Z]    - ID: 1024, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.202Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.203Z]    - ID: 1021, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.205Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-24T11:57:23.203Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.201Z]    - ID: 1022, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.205Z]      Problem: ProjectID filter expects 15, got 15 - MATCH
+---
+[2026-01-24T11:57:23.211Z]      Problem: ProjectID filter expects 15, got 12 - MISMATCH
+---
+[2026-01-24T11:57:23.210Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-24T11:57:23.213Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-24T11:57:23.214Z]      Problem: ProjectID filter expects 15, got 15 - MATCH
+---
+[2026-01-24T11:57:23.215Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-24T11:57:23.217Z]      Problem: ProjectID filter expects 15, got 15 - MATCH
+---
+[2026-01-24T11:57:23.217Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-24T11:57:23.216Z]      Problem: ProjectID filter expects 15, got 15 - MATCH
+---
+[2026-01-24T11:57:23.219Z]      Problem: ProjectID filter expects 15, got 15 - MATCH
+---
+[2026-01-24T11:57:23.218Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-24T11:57:23.230Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.233Z]    - ID: 1013, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.236Z]    - ID: 1012, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.236Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.245Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-24T11:57:23.233Z]      Problem: ProjectID filter expects 15, got 16 - MISMATCH
+---
+[2026-01-24T11:57:23.229Z]    - ID: 1014, ProjectID: 16, Status: Pending
+---
+[2026-01-24T11:57:23.246Z]      Problem: ProjectID filter expects 15, got 9 - MISMATCH
+---
+[2026-01-24T11:57:23.250Z] 📋 Final returned workflows count: 0
+
+---
+[2026-01-25T08:41:27.083Z] 
+================================================================================
+---
+[2026-01-25T08:41:27.083Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T08:41:27.084Z]   - User Dept ID: 9
+---
+[2026-01-25T08:41:27.083Z]   - Is Admin: false
+---
+[2026-01-25T08:41:27.084Z]   - User Project ID: 16
+---
+[2026-01-25T08:41:27.111Z] 📊 Total workflows in database: 21
+---
+[2026-01-25T08:41:27.201Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.201Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.201Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.201Z] 🔍 All workflows in DB (unfiltered): 21 total
+---
+[2026-01-25T08:41:27.201Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.201Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.209Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.202Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:41:27.209Z]   - Adding filter: User Department ID = 9
+---
+[2026-01-25T08:41:27.209Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID AND 
+        EXISTS (
+          SELECT 1 FROM tblProcessDepartment pd
+          WHERE pd.ProcessID = hdr.ProcessID
+            AND pd.DepartmentID = @UserDeptId
+        )
+      
+---
+[2026-01-25T08:41:27.272Z] ✅ Query executed - Returning 14 workflows
+---
+[2026-01-25T08:41:27.273Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:41:27.272Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T08:41:27.273Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:41:27.274Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T08:41:27.274Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:41:27.274Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T08:41:27.274Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:41:27.274Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:41:27.275Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:41:27.275Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:41:27.275Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:41:27.277Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T08:41:27.277Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T08:41:27.274Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:41:27.275Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:41:27.277Z] 📋 Final returned workflows count: 14
+
+---
+[2026-01-25T08:42:17.152Z] 
+================================================================================
+---
+[2026-01-25T08:42:17.152Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T08:42:17.152Z]   - User Dept ID: 9
+---
+[2026-01-25T08:42:17.152Z]   - User Project ID: 16
+---
+[2026-01-25T08:42:17.152Z]   - Is Admin: false
+---
+[2026-01-25T08:42:17.177Z] 📊 Total workflows in database: 21
+---
+[2026-01-25T08:42:17.224Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.224Z] 🔍 All workflows in DB (unfiltered): 21 total
+---
+[2026-01-25T08:42:17.224Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.224Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.224Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.224Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.225Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:42:17.229Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T08:42:17.230Z]   - Adding filter: User Department ID = 9
+---
+[2026-01-25T08:42:17.230Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID AND 
+        EXISTS (
+          SELECT 1 FROM tblProcessDepartment pd
+          WHERE pd.ProcessID = hdr.ProcessID
+            AND pd.DepartmentID = @UserDeptId
+        )
+      
+---
+[2026-01-25T08:42:17.252Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T08:42:17.253Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:42:17.253Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:42:17.253Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T08:42:17.253Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T08:42:17.254Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:42:17.253Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:42:17.254Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:42:17.252Z] ✅ Query executed - Returning 14 workflows
+---
+[2026-01-25T08:42:17.254Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:42:17.256Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:42:17.256Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:42:17.256Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:42:17.258Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T08:42:17.258Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T08:42:17.256Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:42:17.258Z] 📋 Final returned workflows count: 14
+
+---
+[2026-01-25T08:43:21.952Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T08:43:21.952Z] 
+================================================================================
+---
+[2026-01-25T08:43:21.952Z]   - Is Admin: true
+---
+[2026-01-25T08:43:21.952Z]   - User Project ID: 16
+---
+[2026-01-25T08:43:21.952Z]   - User Dept ID: null
+---
+[2026-01-25T08:43:21.974Z] 📊 Total workflows in database: 21
+---
+[2026-01-25T08:43:22.027Z] 🔍 All workflows in DB (unfiltered): 21 total
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.032Z]   - User is Admin - no department filter applied
+---
+[2026-01-25T08:43:22.032Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T08:43:22.032Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID
+---
+[2026-01-25T08:43:22.027Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:22.078Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:22.075Z] ✅ Query executed - Returning 14 workflows
+---
+[2026-01-25T08:43:22.078Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:22.079Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T08:43:22.079Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T08:43:22.079Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:22.079Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:22.079Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:22.076Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T08:43:22.079Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:22.080Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:22.080Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:22.080Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:22.081Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T08:43:22.080Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:22.081Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T08:43:22.081Z] 📋 Final returned workflows count: 14
+
+---
+[2026-01-25T08:43:46.221Z]   - Is Admin: true
+---
+[2026-01-25T08:43:46.221Z] 
+================================================================================
+---
+[2026-01-25T08:43:46.221Z]   - User Dept ID: null
+---
+[2026-01-25T08:43:46.221Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T08:43:46.222Z]   - User Project ID: 16
+---
+[2026-01-25T08:43:46.242Z] 📊 Total workflows in database: 22
+---
+[2026-01-25T08:43:46.391Z] 🔍 All workflows in DB (unfiltered): 22 total
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1032, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: null
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.391Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.392Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:43:46.397Z]   - User is Admin - no department filter applied
+---
+[2026-01-25T08:43:46.396Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T08:43:46.397Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID
+---
+[2026-01-25T08:43:46.421Z] ✅ Query executed - Returning 15 workflows
+---
+[2026-01-25T08:43:46.423Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:46.424Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T08:43:46.424Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T08:43:46.425Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:46.425Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:46.426Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:46.426Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:46.423Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:46.426Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:46.427Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:43:46.427Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T08:43:46.427Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T08:43:46.427Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:43:46.428Z] 📋 Final returned workflows count: 15
+
+---
+[2026-01-25T08:43:46.421Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T08:43:46.426Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:44:09.730Z]   - Is Admin: false
+---
+[2026-01-25T08:44:09.729Z] 
+================================================================================
+---
+[2026-01-25T08:44:09.730Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T08:44:09.730Z]   - User Project ID: 16
+---
+[2026-01-25T08:44:09.730Z]   - User Dept ID: 9
+---
+[2026-01-25T08:44:09.753Z] 📊 Total workflows in database: 22
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1032, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: null
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z] 🔍 All workflows in DB (unfiltered): 22 total
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.813Z]   - Adding filter: User Department ID = 9
+---
+[2026-01-25T08:44:09.807Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:44:09.813Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID AND 
+        EXISTS (
+          SELECT 1 FROM tblProcessDepartment pd
+          WHERE pd.ProcessID = hdr.ProcessID
+            AND pd.DepartmentID = @UserDeptId
+        )
+      
+---
+[2026-01-25T08:44:09.812Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T08:44:09.841Z] ✅ Query executed - Returning 15 workflows
+---
+[2026-01-25T08:44:09.842Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T08:44:09.842Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:44:09.842Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T08:44:09.842Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:44:09.842Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T08:44:09.843Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:44:09.843Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:44:09.843Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:44:09.843Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:44:09.843Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:44:09.843Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:44:09.844Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:44:09.844Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:44:09.844Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T08:44:09.844Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T08:44:09.845Z] 📋 Final returned workflows count: 15
+
+---
+[2026-01-25T08:45:57.049Z] 
+================================================================================
+---
+[2026-01-25T08:45:57.050Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T08:45:57.050Z]   - Is Admin: false
+---
+[2026-01-25T08:45:57.050Z]   - User Project ID: 16
+---
+[2026-01-25T08:45:57.050Z]   - User Dept ID: 8
+---
+[2026-01-25T08:45:57.069Z] 📊 Total workflows in database: 22
+---
+[2026-01-25T08:45:57.113Z] 🔍 All workflows in DB (unfiltered): 22 total
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1032, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: null
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.118Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T08:45:57.118Z]   - Adding filter: User Department ID = 8
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.118Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID AND 
+        EXISTS (
+          SELECT 1 FROM tblProcessDepartment pd
+          WHERE pd.ProcessID = hdr.ProcessID
+            AND pd.DepartmentID = @UserDeptId
+        )
+      
+---
+[2026-01-25T08:45:57.113Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T08:45:57.143Z] ✅ Query executed - Returning 15 workflows
+---
+[2026-01-25T08:45:57.144Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:45:57.145Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T08:45:57.145Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T08:45:57.144Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:45:57.145Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:45:57.144Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T08:45:57.145Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:45:57.145Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:45:57.146Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:45:57.146Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:45:57.145Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:45:57.146Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T08:45:57.146Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-25T08:45:57.147Z] 📋 Final returned workflows count: 15
+
+---
+[2026-01-25T08:45:57.147Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T08:45:57.147Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T09:34:51.548Z]   - User Dept ID: 8
+---
+[2026-01-25T09:34:51.548Z] 
+================================================================================
+---
+[2026-01-25T09:34:51.548Z]   - User Project ID: 16
+---
+[2026-01-25T09:34:51.548Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T09:34:51.548Z]   - Is Admin: false
+---
+[2026-01-25T09:34:51.583Z] 📊 Total workflows in database: 22
+---
+[2026-01-25T09:34:51.638Z] 🔍 All workflows in DB (unfiltered): 22 total
+---
+[2026-01-25T09:34:51.638Z]    - ID: 1032, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: null
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.639Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:34:51.646Z]   - Adding filter: User Department ID = 8
+---
+[2026-01-25T09:34:51.647Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID AND 
+        EXISTS (
+          SELECT 1 FROM tblProcessDepartment pd
+          WHERE pd.ProcessID = hdr.ProcessID
+            AND pd.DepartmentID = @UserDeptId
+        )
+      
+---
+[2026-01-25T09:34:51.646Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T09:34:51.674Z] ✅ Query executed - Returning 15 workflows
+---
+[2026-01-25T09:34:51.675Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T09:34:51.675Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:34:51.675Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:34:51.676Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T09:34:51.676Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T09:34:51.676Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:34:51.676Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:34:51.677Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:34:51.678Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:34:51.679Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:34:51.678Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:34:51.679Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:34:51.679Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:34:51.680Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T09:34:51.680Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T09:34:51.680Z] 📋 Final returned workflows count: 15
+
+---
+[2026-01-25T09:44:24.304Z] 
+================================================================================
+---
+[2026-01-25T09:44:24.305Z]   - Is Admin: false
+---
+[2026-01-25T09:44:24.304Z] 📊 GET /api/workFlowDashData - User info:
+---
+[2026-01-25T09:44:24.305Z]   - User Dept ID: 8
+---
+[2026-01-25T09:44:24.305Z]   - User Project ID: 16
+---
+[2026-01-25T09:44:24.330Z] 📊 Total workflows in database: 22
+---
+[2026-01-25T09:44:24.379Z] 🔍 All workflows in DB (unfiltered): 22 total
+---
+[2026-01-25T09:44:24.379Z]    - ID: 1032, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: null
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1028, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 15:11:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1031, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:34:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1029, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:51:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1027, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 13:46:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1024, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 14:19:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1030, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 16:25:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1026, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:41:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1022, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Tue Apr 02 2024 09:59:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1023, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 09:00:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1021, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Thu Jan 15 2026 08:50:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1020, ProjectID: 15, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 15:45:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1019, ProjectID: 12, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 17:18:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1018, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:56:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1025, ProjectID: 16, ProcessID: 3, Status: Pending, startDate: Mon Apr 01 2024 10:30:00 GMT+0300 (Eastern European Summer Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1016, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:32:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1017, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 16:49:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1013, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:07:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1012, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Tue Jan 13 2026 09:01:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1014, ProjectID: 16, ProcessID: 1, Status: Pending, startDate: Wed Jan 14 2026 14:15:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.384Z]   - Adding filter: Project ID = 16
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1011, ProjectID: 9, ProcessID: 1, Status: Pending, startDate: Fri Jan 09 2026 17:21:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.380Z]    - ID: 1015, ProjectID: 15, ProcessID: 2, Status: Pending, startDate: Wed Jan 14 2026 14:22:00 GMT+0200 (Eastern European Standard Time)
+---
+[2026-01-25T09:44:24.385Z]   - Final WHERE clause: hdr.ProjectID = @ProjectID AND 
+        EXISTS (
+          SELECT 1 FROM tblProcessDepartment pd
+          WHERE pd.ProcessID = hdr.ProcessID
+            AND pd.DepartmentID = @UserDeptId
+        )
+      
+---
+[2026-01-25T09:44:24.385Z]   - Adding filter: User Department ID = 8
+---
+[2026-01-25T09:44:24.414Z] ✅ Query executed - Returning 15 workflows
+---
+[2026-01-25T09:44:24.422Z]    - ID: 1020, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:44:24.434Z]    - ID: 1019, ProjectID: 12, Status: Pending
+---
+[2026-01-25T09:44:24.418Z] 
+⚠️  WORKFLOWS FILTERED OUT:
+---
+[2026-01-25T09:44:24.439Z]    - ID: 1018, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:44:24.422Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:44:24.436Z]      Problem: ProjectID filter expects 16, got 12 - MISMATCH
+---
+[2026-01-25T09:44:24.440Z]    - ID: 1016, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:44:24.440Z]    - ID: 1017, ProjectID: 15, Status: Pending
+---
+[2026-01-25T09:44:24.440Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:44:24.439Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:44:24.440Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:44:24.441Z]    - ID: 1011, ProjectID: 9, Status: Pending
+---
+[2026-01-25T09:44:24.441Z]      Problem: ProjectID filter expects 16, got 9 - MISMATCH
+---
+[2026-01-25T09:44:24.441Z] 📋 Final returned workflows count: 15
+
+---
+[2026-01-25T09:44:24.440Z]      Problem: ProjectID filter expects 16, got 15 - MISMATCH
+---
+[2026-01-25T09:44:24.440Z]    - ID: 1015, ProjectID: 15, Status: Pending
+---
