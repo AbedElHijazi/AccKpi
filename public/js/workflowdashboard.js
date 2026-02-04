@@ -55,6 +55,45 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Show/hide mobile add button based on screen size
     toggleMobileAddButton();
     window.addEventListener('resize', toggleMobileAddButton);
+    
+    // Listen for payment completion events from userpage.js
+    window.addEventListener('paymentCompleted', async (event) => {
+        const { workFlowHdrId } = event.detail;
+        console.log(`📡 Received paymentCompleted event for workflow ${workFlowHdrId}`);
+        
+        // Refresh the specific workflow's payment steps
+        const workflow = allWorkflows.find(w => w.HdrID === workFlowHdrId);
+        if (workflow) {
+            try {
+                const paymentRes = await fetch(`/api/workflow-steps/${workFlowHdrId}`);
+                if (paymentRes.ok) {
+                    const freshPaymentSteps = await paymentRes.json();
+                    workflow.paymentSteps = freshPaymentSteps;
+                    
+                    // Log the fresh data
+                    const completedCount = freshPaymentSteps.filter(step => !step.isActive).length;
+                    const totalCount = freshPaymentSteps.length;
+                    console.log(`🔄 Refreshed payment steps for workflow ${workFlowHdrId}`);
+                    console.log(`   Total payments: ${totalCount}`);
+                    console.log(`   Completed payments: ${completedCount}`);
+                    console.log(`   Payment steps data:`, freshPaymentSteps);
+                    
+                    // Re-render the table to show updated payment status
+                    console.log(`🎨 Re-rendering table...`);
+                    updateTable();
+                    updateStats();
+                    updatePagination();
+                    console.log(`✅ Dashboard fully updated with new payment status`);
+                } else {
+                    console.error(`❌ Payment steps response not ok:`, paymentRes.status);
+                }
+            } catch (err) {
+                console.error(`❌ Failed to refresh payment steps:`, err);
+            }
+        } else {
+            console.warn(`⚠️ Workflow ${workFlowHdrId} not found in allWorkflows`);
+        }
+    });
 });
 
 // Toggle mobile add button visibility
@@ -180,6 +219,29 @@ async function loadWorkflowData() {
                     -->
                 </span>
             `;
+        }
+        
+        // Fetch payment steps for each workflow
+        console.log("🔄 Fetching payment steps for each workflow...");
+        for (let workflow of allWorkflows) {
+            try {
+                const paymentRes = await fetch(`/api/workflow-steps/${workflow.HdrID}`);
+                if (paymentRes.ok) {
+                    workflow.paymentSteps = await paymentRes.json();
+                    console.log(`  ✅ Workflow ${workflow.HdrID}: ${workflow.paymentSteps.length} payment steps`);
+                    
+                    // Log detailed payment step info
+                    workflow.paymentSteps.forEach((step, idx) => {
+                        console.log(`     Step ${idx + 1}: stepNumber=${step.stepNumber}, isActive=${step.isActive}, data:`, step);
+                    });
+                } else {
+                    workflow.paymentSteps = [];
+                    console.log(`  ⚠️ Workflow ${workflow.HdrID}: No payment steps`);
+                }
+            } catch (err) {
+                console.error(`  ❌ Failed to fetch payment steps for workflow ${workflow.HdrID}:`, err);
+                workflow.paymentSteps = [];
+            }
         }
         
         // Filter out Blocked and In Progress statuses from the data
@@ -590,7 +652,35 @@ function updateTable() {
         workflowTableBody.innerHTML = '';
     } else {
         noResultsMessage.style.display = 'none';
-        workflowTableBody.innerHTML = paginatedWorkflows.map(workflow => `
+        workflowTableBody.innerHTML = paginatedWorkflows.map(workflow => {
+            // Determine final status - check if all payments are complete
+            let displayStatus = workflow.Status;
+            
+            console.log(`\n🔍 Checking workflow ${workflow.HdrID}:`);
+            console.log(`   paymentSteps exists: ${!!workflow.paymentSteps}`);
+            console.log(`   paymentSteps type: ${Array.isArray(workflow.paymentSteps) ? 'Array' : typeof workflow.paymentSteps}`);
+            console.log(`   paymentSteps data:`, workflow.paymentSteps);
+            
+            // Check if workflow has payment steps and all are complete
+            if (workflow.paymentSteps && Array.isArray(workflow.paymentSteps) && workflow.paymentSteps.length > 0) {
+                // Count completed payments (those that have StepFinished set)
+                const completedPayments = workflow.paymentSteps.filter(step => step.StepFinished).length;
+                const totalPayments = workflow.paymentSteps.length;
+                
+                console.log(`   Total: ${totalPayments}, Completed: ${completedPayments}`);
+                
+                // If all payments are complete, mark as Completed
+                if (completedPayments === totalPayments) {
+                    displayStatus = 'Completed';
+                    console.log(`   ✅ All payments complete! Status: ${displayStatus}`);
+                } else {
+                    console.log(`   ⏳ ${completedPayments}/${totalPayments} payments complete`);
+                }
+            } else {
+                console.log(`   ⚠️ No payment steps data`);
+            }
+            
+            return `
             <tr class="clickable" data-hdrid="${workflow.HdrID}">
                 <td>${workflow.HdrID || '-'}</td>
                 <td>${workflow.ProcessName || '-'}</td>
@@ -598,9 +688,9 @@ function updateTable() {
                 <td>${workflow.ProjectName || '-'}</td>
                 <td>${workflow.SupplierContractorName || '-'}</td>
                 <td>
-                    <span class="status-badge status-${workflow.Status ? workflow.Status.toLowerCase().replace(' ', '-') : ''}">
-                        ${getStatusIcon(workflow.Status)}
-                        ${workflow.Status || '-'}
+                    <span class="status-badge status-${displayStatus ? displayStatus.toLowerCase().replace(' ', '-') : ''}">
+                        ${getStatusIcon(displayStatus)}
+                        ${displayStatus || '-'}
                     </span>
                 </td>
                 <td>${formatDate(workflow.createdDate)}</td>
@@ -616,7 +706,7 @@ function updateTable() {
                     </button>
                 </td>
             </tr>
-        `).join('');
+        `}).join('');
         
         // Attach event listeners using event delegation on the table body
         attachTableEventListeners();
