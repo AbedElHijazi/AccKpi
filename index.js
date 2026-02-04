@@ -4480,6 +4480,9 @@ app.post('/finish-task/:taskId', async (req, res) => {
     const updateResult = await pool.request()
       .input('taskId', taskId)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 68c9f7961bc81a85fbbf96086d5b1e0f280e513f
       .input('finishTime', sql.DateTime2, finishTime)
       .input('delay', delay)
 =======
