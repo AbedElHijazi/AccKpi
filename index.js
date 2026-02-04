@@ -4479,16 +4479,8 @@ app.post('/finish-task/:taskId', async (req, res) => {
     console.log('🔄 Updating task with:', { taskId, finishTimeFormatted, delay, workFlowHdrId });
     const updateResult = await pool.request()
       .input('taskId', taskId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 68c9f7961bc81a85fbbf96086d5b1e0f280e513f
       .input('finishTime', sql.DateTime2, finishTime)
       .input('delay', delay)
-=======
-      .input('finishTime', sql.DateTime2, finishTimeFormatted)
-      .input('delay', sql.Int, delay)
->>>>>>> d5cd6a75264daa266eac4b032aab351f95c4f2af
       .input('workFlowHdrId', workFlowHdrId)
       .query(`
         UPDATE tblWorkflowDtl
